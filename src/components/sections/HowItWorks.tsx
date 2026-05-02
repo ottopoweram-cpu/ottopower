@@ -74,8 +74,8 @@ export function HowItWorks() {
             <div className="rounded-2xl overflow-hidden shadow-lg hover-lift">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/hero.png"
-                alt="Painéis solares fotovoltaicos"
+                src="/images/project-1.png"
+                alt="Painéis solares fotovoltaicos em residência"
                 className="w-full h-52 object-cover"
               />
             </div>
