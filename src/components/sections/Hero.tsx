@@ -87,8 +87,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right image — no floating card */}
-          <div className="hidden lg:flex items-center justify-center animate-fade-in-right delay-300">
+          {/* Right image */}
+          <div className="flex w-full mt-10 lg:mt-0 items-center justify-center animate-fade-in-up lg:animate-fade-in-right delay-300">
             <div className="relative w-full max-w-lg">
               {/* Glow effect behind image */}
               <div className="absolute inset-0 bg-yellow-400/20 rounded-3xl blur-3xl scale-95" />
