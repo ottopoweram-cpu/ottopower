@@ -56,7 +56,7 @@ export function FAQ() {
 
           {/* Right: accordion */}
           <div>
-            <Accordion type="single" className="space-y-4">
+            <Accordion className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
