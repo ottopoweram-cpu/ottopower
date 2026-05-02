@@ -56,18 +56,18 @@ export function Projects() {
               </div>
 
               {/* Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-70 group-hover:opacity-85 transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-80 lg:opacity-70 group-hover:opacity-85 transition-opacity duration-300`} />
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8">
                 <div className="flex items-end justify-between">
                   <div>
                     <h3 className="text-2xl font-black text-white mb-2">{project.title}</h3>
-                    <p className="text-white/80 text-sm leading-relaxed max-w-[200px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
+                    <p className="text-white/90 lg:text-white/80 text-sm leading-relaxed max-w-[200px] lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 lg:translate-y-4 lg:group-hover:translate-y-0">
                       {project.description}
                     </p>
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-4 group-hover:translate-x-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 lg:translate-x-4 lg:group-hover:translate-x-0">
                     <ArrowUpRight className="w-5 h-5 text-white" />
                   </div>
                 </div>

@@ -59,14 +59,14 @@ export function Hero() {
                 href={siteConfig.links.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-yellow-400 text-blue-950 font-bold px-8 py-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] hover:scale-105 text-base animate-pulse-glow"
+                className="group relative bg-yellow-400 text-blue-950 font-bold px-8 py-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] lg:hover:scale-105 active:scale-95 text-base animate-pulse-glow"
               >
                 Solicitar Orçamento Grátis
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#como-funciona"
-                className="glass text-white font-semibold px-8 py-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/15 text-base"
+                className="glass text-white font-semibold px-8 py-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/15 active:scale-95 text-base"
               >
                 Como Funciona
               </a>

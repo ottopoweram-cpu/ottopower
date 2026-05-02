@@ -158,7 +158,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-14 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed text-base"
+                  className="w-full h-14 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] lg:hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed text-base"
                 >
                   {isSubmitting ? (
                     <>
@@ -199,7 +199,7 @@ export function Contact() {
               href={siteConfig.links.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366] rounded-2xl p-6 flex items-center gap-4 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,211,102,0.3)]"
+              className="group bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366] rounded-2xl p-6 flex items-center gap-4 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,211,102,0.3)] active:scale-95"
             >
               <div className="w-12 h-12 rounded-xl bg-[#25D366]/20 group-hover:bg-white/20 flex items-center justify-center shrink-0">
                 <svg className="w-7 h-7 text-[#25D366] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
