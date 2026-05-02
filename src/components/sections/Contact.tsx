@@ -21,7 +21,36 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const phone = formData.get("phone") as string;
+    const email = formData.get("email") as string;
+    const type = formData.get("type") as string;
+    const message = formData.get("message") as string;
+
+    const projectTypes: Record<string, string> = {
+      residencial: "Residencial",
+      comercial: "Comércio",
+      industrial: "Indústria",
+      rural: "Rural / Agronegócio"
+    };
+    
+    const typeDisplay = type ? projectTypes[type] : "Não especificado";
+
+    let text = `Olá! Gostaria de solicitar um orçamento para energia solar.%0A%0A`;
+    text += `*Nome:* ${name}%0A`;
+    text += `*Telefone:* ${phone}%0A`;
+    text += `*E-mail:* ${email}%0A`;
+    text += `*Tipo de Projeto:* ${typeDisplay}`;
+    
+    if (message) {
+      text += `%0A*Mensagem:* ${message}`;
+    }
+
+    const whatsappUrl = `${siteConfig.links.whatsapp}?text=${text}`;
+    window.open(whatsappUrl, "_blank");
+
     setIsSubmitting(false);
     setIsSuccess(true);
     setTimeout(() => setIsSuccess(false), 6000);
@@ -70,6 +99,7 @@ export function Contact() {
                     <Label htmlFor="name" className="text-blue-100 font-medium">Nome Completo</Label>
                     <Input
                       id="name"
+                      name="name"
                       required
                       placeholder="João da Silva"
                       className="bg-white/10 border-white/20 text-white placeholder:text-blue-300/60 focus:border-yellow-400 focus:ring-yellow-400/20 transition-colors rounded-xl h-12"
@@ -79,6 +109,7 @@ export function Contact() {
                     <Label htmlFor="phone" className="text-blue-100 font-medium">Telefone / WhatsApp</Label>
                     <Input
                       id="phone"
+                      name="phone"
                       required
                       placeholder="(92) 90000-0000"
                       className="bg-white/10 border-white/20 text-white placeholder:text-blue-300/60 focus:border-yellow-400 focus:ring-yellow-400/20 transition-colors rounded-xl h-12"
@@ -90,6 +121,7 @@ export function Contact() {
                   <Label htmlFor="email" className="text-blue-100 font-medium">E-mail</Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     required
                     placeholder="joao@exemplo.com"
@@ -101,6 +133,7 @@ export function Contact() {
                   <Label htmlFor="type" className="text-blue-100 font-medium">Tipo de Projeto</Label>
                   <select
                     id="type"
+                    name="type"
                     className="w-full h-12 px-4 rounded-xl bg-white/10 border border-white/20 text-white focus:border-yellow-400 outline-none transition-colors"
                     defaultValue=""
                   >
@@ -116,6 +149,7 @@ export function Contact() {
                   <Label htmlFor="message" className="text-blue-100 font-medium">Mensagem (opcional)</Label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Gostaria de saber mais sobre..."
                     className="bg-white/10 border-white/20 text-white placeholder:text-blue-300/60 focus:border-yellow-400 focus:ring-yellow-400/20 transition-colors rounded-xl min-h-[120px] resize-none"
                   />
